@@ -1,0 +1,49 @@
+
+
+
+				        192.     168.       2.     100  =  IP Dezimal
+		A      11000000.10101000.00000010.01100100  =  IP Binär
+				
+				        255.     255.     255.       0  =  Subnetmask Dezial
+		B      11111111.11111111.11111111.00000000  =  Subnetmask Binär  D.h. 254 
+				
+				
+	C	A&B    11000000.10101000.00000010.00000000  =  Netzaddresse Binär
+				        192.     168.       2.       0  =  Netzaddresse Dezimal
+				
+	D	A&!B   00000000.00000000.00000000.01100100  =  Deine Addresse Binär
+				          0.       0.       0.     100  =  Deine Addresse Dezimal
+				
+				
+	 	C|!B   11000000.10101000.00000010.11111111  =  Broadcast Binär (Im Netzwerk!)
+				        192.     168.       2.     255  =  Broadcast Dezimal (Im Netzwerk!)
+				
+		1		   11111111.11111111.11111111.11111111  =  Broadcast Binär (Global!)
+				        255.     255.     255.     255  =  Broadcast Dezimal (Global!)
+		
+		
+		-------------------------------------------------------------------------------------
+		
+															|
+					11111111.11111111.11|000000.00000000  =  Subnetmask  Bin   (Subnetzmaske hört auf wen keine 1 mehr da ist danach kommt broadcast 1111...)
+					     255.     255.  |   192.       0  =  Subnetmask  Dec
+															|
+															|
+					11000000.10101000.01|000000.00000000  =  Network			Bin
+					     192.     168.  |    64.       0  =  Network			Dec
+															|
+															|
+					11000000.10101000.01|111111.11111111  =  Broadcast   Bin
+					     192.     168.  |   127.     255  =  Broadcast		Dec
+															|
+					11000000.10101000.01|000000.00000001  =  Kleinste Teilnemer Addresse  Bin
+							 192.     168.  |    64.       1  =  Kleinste Teilnemer Addresse  Dec
+															|
+					11000000.10101000.01|111111.11111110  =  Größte Teilnemer Addresse  Bin
+					     192.     168.  |   127.     254  =  Größte Teilnemer Addresse  Dec
+															|
+					Teilnehmer Anzahl = |16383
+															|
+					11000000.10101000.01|001100.00100010  =  Irgend eine Teilnehmer Addresse    Bin
+					     192.     168.  |    76.      34  =  Irgend eine Teilnehmer Addresse    Dec
+							                |

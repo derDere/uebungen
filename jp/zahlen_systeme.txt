@@ -1,0 +1,81 @@
+
+
+
+		Oktal geschrieben: 23
+		
+		Indexe:            10
+		
+				Index 0: 3
+				Index 1: 2
+		
+		
+		Basis: 8
+		
+		Werte berechnung:
+			Summe von allen ziffern (
+				(basis ^ index) * ziffer
+			)
+			also
+				(8 ^ 0) * 3 = 3
+				+
+				(8 ^ 1) * 2 = 16
+				=
+				19
+				
+			also: oktal 23 ist decimal 19
+			
+
+-------------------------------------------------------------
+
+		binär geschrieben: 11
+		
+		Indexe:            10
+		
+				Index 0: 1
+				Index 1: 1
+		
+		
+		Basis: 2
+		
+		Werte berechnung:
+			Summe von allen ziffern (
+				(basis ^ index) * ziffer
+			)
+			also
+				(2 ^ 0) * 1 = 1
+				+
+				(2 ^ 1) * 1 = 2
+				=
+				3
+				
+			also: binär 11 ist decimal 3
+			
+
+
+
+-------------------------------------------------------------
+
+
+		hexadezimal geschrieben: 12
+		
+		Indexe:                  10
+		
+				Index 0: 2
+				Index 1: 1
+		
+		
+		Basis: 16
+		
+		Werte berechnung:
+			Summe von allen ziffern (
+				(basis ^ index) * ziffer
+			)
+			also
+				(16 ^ 0) * 2 = 2
+				+
+				(16 ^ 1) * 1 = 16
+				=
+				18
+				
+			also: hexadezimal 12 ist decimal 18
+		
