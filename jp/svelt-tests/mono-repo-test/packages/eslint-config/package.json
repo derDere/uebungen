@@ -1,0 +1,17 @@
+{
+  "name": "@repo/eslint-config",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./svelte": "./svelte.js"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-svelte": "^3.2.0",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.21.0"
+  }
+}

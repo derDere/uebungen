@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "mcp__context7__resolve-library-id",
+      "mcp__stackexchange__so_search",
+      "mcp__context7__query-docs",
+      "WebFetch(domain:maier.tech)",
+      "WebFetch(domain:vigerust.dev)",
+      "Bash(npm --version)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "Bash(timeout 15 npx vite dev --port 5173)",
+      "Bash(timeout 15 npx vite dev --port 5174)",
+      "WebFetch(domain:turborepo.dev)",
+      "WebFetch(domain:github.com)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm:*)"
+    ]
+  }
+}

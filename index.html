@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Übungen &mdash; Sammlung</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --ink: #1f2430;
+    --ink-soft: #4b5161;
+    --muted: #8a8f9e;
+    --accent: #3d5a80;
+    --accent-soft: #e6eef7;
+    --border: #e5e2da;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+  header.hero {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  header.hero h1 {
+    font-size: 2.4rem;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  header.hero p.lead {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    margin: 0 0 1rem;
+    max-width: 60ch;
+  }
+  header.hero p.meta {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0;
+  }
+  header.hero code {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  section { margin-bottom: 3rem; }
+  section > h2 {
+    font-size: 1.35rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.01em;
+  }
+  section > p.section-lead {
+    color: var(--ink-soft);
+    margin: 0 0 1.25rem;
+    font-size: 0.95rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+    transition: transform 0.12s ease, border-color 0.12s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+  .card .tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+  .card h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .card p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .card .path {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .featured .card {
+    padding: 1.4rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f3f5fa 100%);
+    border-left: 4px solid var(--accent);
+  }
+  .featured .card h3 { font-size: 1.15rem; }
+  @media (max-width: 640px) {
+    .wrap { padding: 2rem 1rem 4rem; }
+    header.hero h1 { font-size: 1.9rem; }
+    .featured { grid-template-columns: 1fr; }
+  }
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>Übungen</h1>
+  <p class="lead">
+    Eine gemischte Sammlung: Aufgabenblätter als PDF, kleine Code-Snippets
+    in mehreren Sprachen, handschriftliche Notizen zu Netzwerk- und
+    Zahlensystem-Themen &mdash; und zwei gr&ouml;&szlig;ere
+    Projekte, an denen l&auml;nger gearbeitet wurde.
+  </p>
+  <p class="meta">
+    Die meisten Sachen liegen unter <code>jp/</code>. Wer nur reinschnuppern will:
+    unten die Featured-Projekte ansehen.
+  </p>
+</header>
+
+<section>
+  <h2>Featured Projekte</h2>
+  <p class="section-lead">Die beiden richtigen Apps im Repo &mdash; jeweils mit eigener Architektur und Doku.</p>
+  <div class="featured">
+    <a class="card" href="jp/tool-helper/README.md">
+      <span class="tag">Full-Stack App</span>
+      <h3>Tool Helper</h3>
+      <p>
+        Werkzeuge verwalten und Checklisten aus Vorlagen erzeugen.
+        FastAPI + SQLAlchemy + SQLite im Backend, Svelte SPA im Frontend.
+      </p>
+      <span class="path">jp/tool-helper/</span>
+    </a>
+    <a class="card" href="jp/svelt-tests/mono-repo-test/">
+      <span class="tag">Monorepo</span>
+      <h3>SvelteKit Monorepo Demo</h3>
+      <p>
+        pnpm + Turborepo mit drei SvelteKit-Apps (Portal, Reader, Writer),
+        die sich zwei gemeinsame Library-Pakete teilen.
+      </p>
+      <span class="path">jp/svelt-tests/mono-repo-test/</span>
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>Aufgabenbl&auml;tter (PDF)</h2>
+  <p class="section-lead">Kurs- und &Uuml;bungsdokumente.</p>
+  <div class="grid">
+    <a class="card" href="jp/ITS_Aufgabe_4.pdf">
+      <span class="tag">ITS</span>
+      <h3>ITS Aufgabe 4</h3>
+      <p>Aufgabenblatt aus dem ITS-Kurs.</p>
+      <span class="path">jp/ITS_Aufgabe_4.pdf</span>
+    </a>
+    <a class="card" href="jp/ITS_Aufgabe_6.pdf">
+      <span class="tag">ITS</span>
+      <h3>ITS Aufgabe 6</h3>
+      <p>Aufgabenblatt aus dem ITS-Kurs.</p>
+      <span class="path">jp/ITS_Aufgabe_6.pdf</span>
+    </a>
+    <a class="card" href="jp/ITS_Aufgabe_8.pdf">
+      <span class="tag">ITS</span>
+      <h3>ITS Aufgabe 8</h3>
+      <p>Aufgabenblatt aus dem ITS-Kurs.</p>
+      <span class="path">jp/ITS_Aufgabe_8.pdf</span>
+    </a>
+    <a class="card" href="jp/ITS_Aufgabe_9.pdf">
+      <span class="tag">ITS</span>
+      <h3>ITS Aufgabe 9</h3>
+      <p>Aufgabenblatt aus dem ITS-Kurs.</p>
+      <span class="path">jp/ITS_Aufgabe_9.pdf</span>
+    </a>
+    <a class="card" href="jp/bsp_oop.pdf">
+      <span class="tag">OOP</span>
+      <h3>Beispiel OOP</h3>
+      <p>Beispielaufgabe zur objektorientierten Programmierung.</p>
+      <span class="path">jp/bsp_oop.pdf</span>
+    </a>
+    <a class="card" href="jp/uml_aufg.pdf">
+      <span class="tag">UML</span>
+      <h3>UML-Aufgabe</h3>
+      <p>Aufgabe zur UML-Modellierung.</p>
+      <span class="path">jp/uml_aufg.pdf</span>
+    </a>
+    <a class="card" href="jp/FitFlowStudios.pdf">
+      <span class="tag">Projekt</span>
+      <h3>FitFlow Studios</h3>
+      <p>Projektbeschreibung / Konzeptpapier.</p>
+      <span class="path">jp/FitFlowStudios.pdf</span>
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>Code-Snippets</h2>
+  <p class="section-lead">Kleine Beispiele und &Uuml;bungen in verschiedenen Sprachen.</p>
+  <div class="grid">
+    <a class="card" href="jp/sum_all.py">
+      <span class="tag">Python</span>
+      <h3>sum_all.py</h3>
+      <p>Rekursive Summe &uuml;ber verschachtelte Listen, inkl. Testf&auml;llen.</p>
+      <span class="path">jp/sum_all.py</span>
+    </a>
+    <a class="card" href="jp/while_kaputt.py">
+      <span class="tag">Python</span>
+      <h3>while_kaputt.py</h3>
+      <p>Demo einer while-Schleife &mdash; urspr&uuml;nglich mit SyntaxError.</p>
+      <span class="path">jp/while_kaputt.py</span>
+    </a>
+    <a class="card" href="jp/python-beispiel.py">
+      <span class="tag">Python</span>
+      <h3>python-beispiel.py</h3>
+      <p>Einstiegsbeispiel mit Funktionen und <code>print</code>.</p>
+      <span class="path">jp/python-beispiel.py</span>
+    </a>
+    <a class="card" href="jp/translate.py">
+      <span class="tag">Processing</span>
+      <h3>translate.py</h3>
+      <p>Vier ineinander verschobene Dreiecke (Processing-Skript).</p>
+      <span class="path">jp/translate.py</span>
+    </a>
+    <a class="card" href="jp/demo_for_a_bee/">
+      <span class="tag">Processing</span>
+      <h3>demo_for_a_bee</h3>
+      <p>Processing-Sketch (<code>.pyde</code>).</p>
+      <span class="path">jp/demo_for_a_bee/</span>
+    </a>
+    <a class="card" href="jp/ArraysAndTuple.ipynb">
+      <span class="tag">Jupyter</span>
+      <h3>ArraysAndTuple.ipynb</h3>
+      <p>Notebook zu Arrays und Tupeln.</p>
+      <span class="path">jp/ArraysAndTuple.ipynb</span>
+    </a>
+    <a class="card" href="jp/f_script.js">
+      <span class="tag">JavaScript</span>
+      <h3>f_script.js</h3>
+      <p>Einkaufskorb mit Produkten, Summe und Rabattberechnung.</p>
+      <span class="path">jp/f_script.js</span>
+    </a>
+    <a class="card" href="jp/c-plus-plus-beispiel.cpp">
+      <span class="tag">C++</span>
+      <h3>c-plus-plus-beispiel.cpp</h3>
+      <p>Platzhalter-Datei f&uuml;r ein C++-Beispiel.</p>
+      <span class="path">jp/c-plus-plus-beispiel.cpp</span>
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>Notizen</h2>
+  <p class="section-lead">Handschriftliche Herleitungen und Merkzettel.</p>
+  <div class="grid">
+    <a class="card" href="jp/ip_aufbau.txt">
+      <span class="tag">Netzwerk</span>
+      <h3>IP-Aufbau &amp; Subnetting</h3>
+      <p>IP-Adressen, Subnetzmaske, Netzadresse, Broadcast, Teilnehmerbereich.</p>
+      <span class="path">jp/ip_aufbau.txt</span>
+    </a>
+    <a class="card" href="jp/zahlen_systeme.txt">
+      <span class="tag">Mathe</span>
+      <h3>Zahlensysteme</h3>
+      <p>Umrechnung Oktal / Bin&auml;r / Hexadezimal nach Dezimal, Schritt f&uuml;r Schritt.</p>
+      <span class="path">jp/zahlen_systeme.txt</span>
+    </a>
+    <a class="card" href="jp/tool-helper-export.md">
+      <span class="tag">Export</span>
+      <h3>tool-helper-export.md</h3>
+      <p>Beispielhafter Markdown-Export aus dem Tool-Helper.</p>
+      <span class="path">jp/tool-helper-export.md</span>
+    </a>
+    <a class="card" href="hallo.md">
+      <span class="tag">Misc</span>
+      <h3>hallo.md</h3>
+      <p>Kurze Notiz.</p>
+      <span class="path">hallo.md</span>
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>Archiv &mdash; 25. Januar 2021</h2>
+  <p class="section-lead">&Auml;ltere Aufgaben, die nur als Bilddatei bzw. Logisim-Schaltung vorliegen.</p>
+  <div class="grid">
+    <a class="card" href="25Jan2021/1.1/formel.png">
+      <span class="tag">Bild</span>
+      <h3>1.1 &mdash; Formel</h3>
+      <p>Formel als PNG.</p>
+      <span class="path">25Jan2021/1.1/formel.png</span>
+    </a>
+    <a class="card" href="25Jan2021/1.2/schaltung.circ">
+      <span class="tag">Logisim</span>
+      <h3>1.2 &mdash; Schaltung</h3>
+      <p>Logisim-Schaltung (<code>.circ</code>).</p>
+      <span class="path">25Jan2021/1.2/schaltung.circ</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  Repository: <code>uebungen</code> &middot;
+  <a href="LICENSE">LICENSE</a> &middot;
+  <a href="CLAUDE.md">CLAUDE.md</a>
+</footer>
+
+</div>
+</body>
+</html>
